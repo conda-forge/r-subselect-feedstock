@@ -9,18 +9,18 @@ About r-subselect
 
 Home: https://CRAN.R-project.org/package=subselect
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
-Summary: A collection of functions which (i) assess the quality of variable subsets as surrogates for a full data set, in either an exploratory data analysis or in the context of a multivariate linear model, and (ii) search for subsets which are optimal under various criteria.
+Summary: A collection of functions which (i) assess the quality of variable subsets as surrogates for a full data set, in either an exploratory data analysis or in the context of a multivariate linear model, and (ii) search for subsets which are optimal under various criteria. Theoretical support for the heuristic search methods and exploratory data analysis criteria is in Cadima, Cerdeira, Minhoto (2003, <doi:10.1016/j.csda.2003.11.001>). Theoretical support for the leap and bounds algorithm and the criteria for the general multivariate linear model is in Duarte Silva (2001, <doi:10.1006/jmva.2000.1920>). There is a package vignette "subselect", which includes additional references.
 
 About r-subselect
 -----------------
 
 Home: https://CRAN.R-project.org/package=subselect
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
-Summary: A collection of functions which (i) assess the quality of variable subsets as surrogates for a full data set, in either an exploratory data analysis or in the context of a multivariate linear model, and (ii) search for subsets which are optimal under various criteria.
+Summary: A collection of functions which (i) assess the quality of variable subsets as surrogates for a full data set, in either an exploratory data analysis or in the context of a multivariate linear model, and (ii) search for subsets which are optimal under various criteria. Theoretical support for the heuristic search methods and exploratory data analysis criteria is in Cadima, Cerdeira, Minhoto (2003, <doi:10.1016/j.csda.2003.11.001>). Theoretical support for the leap and bounds algorithm and the criteria for the general multivariate linear model is in Duarte Silva (2001, <doi:10.1006/jmva.2000.1920>). There is a package vignette "subselect", which includes additional references.
 
 Current build status
 ====================
