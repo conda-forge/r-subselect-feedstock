@@ -6,7 +6,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: subselect_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/subselect_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/subselect/subselect_{{ version }}.tar.gz
@@ -17,6 +16,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -27,7 +30,7 @@ requirements:
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('m2w64_cxx') }}        # [win]
-    - {{ compiler('m2w64_fortran') }}        # [win]
+    - {{ compiler('m2w64_fortran') }}    # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -51,10 +54,18 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=subselect
-  license: GPL (>= 2)
-  summary: A collection of functions which (i) assess the quality of variable subsets as surrogates for a full data set, in either an exploratory data analysis or in the context of a multivariate linear model, and (ii) search for subsets which are optimal under various criteria.
+  license: GPL-2.0-or-later
+  summary: A collection of functions which (i) assess the quality of variable subsets as surrogates
+    for a full data set, in either an exploratory data analysis or in the context of
+    a multivariate linear model, and (ii) search for subsets which are optimal under
+    various criteria. Theoretical support for the heuristic search methods and exploratory
+    data analysis criteria is in Cadima, Cerdeira, Minhoto (2003, <doi:10.1016/j.csda.2003.11.001>).
+    Theoretical support for the leap and bounds algorithm and the criteria for the general
+    multivariate linear model is in Duarte Silva (2001, <doi:10.1006/jmva.2000.1920>).
+    There is a package vignette "subselect", which includes additional references.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
